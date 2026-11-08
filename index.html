@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>شوية شمس ليكي ☀️</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="floaty" aria-hidden="true"></div>
+
+<!-- 2. شاشة الافتتاح -->
+<section id="intro">
+  <div class="sun"></div><div class="hill"></div>
+  <div class="intro-text">
+    <p class="hand" id="introName"></p>
+    <h1>صباح الخير يا أحلى بنوتة</h1>
+    <p>نفسي يومك النهاردة يديكي ألف سبب تبتسمي</p>
+    <button class="btn" id="startBtn">ابدأ يومي ☀️</button>
+  </div>
+</section>
+
+<main id="main" hidden>
+  <header class="hero page" id="hero" data-tab="🌅" data-name="صباحك">
+    <p id="today" class="small"></p>
+    <h2 class="hand big" id="morningMsg"></h2>
+    <p class="small" id="daysCount"></p>
+    <button class="btn" data-go="next">افتحي هديتك 🎁</button>
+  </header>
+
+  <!-- 3. الهدية -->
+  <section class="page sec" data-tab="🎁" data-name="الهدية" id="gift">
+    <h2 class="hand">هدية النهاردة</h2>
+    <button class="giftbox" id="giftBox" aria-label="افتحي الهدية">
+      <span class="lid"></span><span class="box"></span><span class="emoji">🎁</span>
+    </button>
+    <div class="paper" id="giftOut" hidden></div>
+    <p class="small">مفاجأة جديدة كل يوم</p>
+  </section>
+
+  <!-- 4. الأسباب -->
+  <section class="page sec" data-tab="💌" data-name="أسباب" id="reasons">
+    <h2 class="hand">٣٦٥ سبب بحبك عشانهم</h2>
+    <div class="jar"><span id="jarNotes"></span></div>
+    <button class="btn" id="reasonBtn">اديني سبب 💌</button>
+    <div class="note" id="reasonOut" hidden></div>
+  </section>
+
+  <!-- 5. الذكريات -->
+  <section class="page sec wide" data-tab="📸" data-name="ذكريات" id="memories">
+    <h2 class="hand">عالمنا الصغير</h2>
+    <div class="gallery" id="gallery"></div>
+    <h3 class="hand">خط ذكرياتنا</h3>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <!-- 6. المزاج -->
+  <section class="page sec" data-tab="🌸" data-name="مزاجك" id="mood">
+    <h2 class="hand">حبيبتي عاملة إيه النهاردة؟</h2>
+    <div class="moods" id="moods"></div>
+    <div class="paper" id="moodOut" hidden></div>
+  </section>
+
+  <!-- فيديو -->
+  <section class="page sec full" data-tab="🎥" data-name="فيديو" id="videoPage">
+    <div class="frame">
+      <video id="vid" src="message.mp4" controls playsinline preload="metadata"></video>
+    </div>
+    <p class="quote hand" id="quote"></p>
+  </section>
+
+  <!-- 7. الجواب -->
+  <section class="page sec" data-tab="✉️" data-name="جواب" id="letter">
+    <h2 class="hand">جواب ليكي إنتي بس</h2>
+    <button class="envelope" id="env" aria-label="افتحي الجواب">
+      <span class="flap"></span><span class="front"></span><span class="seal">❤</span>
+    </button>
+    <article class="letter" id="letterBox" hidden></article>
+  </section>
+
+  <!-- 8. الموسيقى -->
+  <section class="page sec" data-tab="🎵" data-name="أغنية" id="music">
+    <h2 class="hand">أغنيتنا</h2>
+    <div class="player">
+      <div class="cover" id="cover">♪</div>
+      <div class="info"><b id="songTitle"></b><span id="songArtist"></span>
+        <div class="bars" id="bars"></div>
+        <input type="range" id="seek" min="0" max="100" value="0" aria-label="التقدم">
+      </div>
+      <button class="play" id="playBtn" aria-label="تشغيل">▶</button>
+    </div>
+    <audio id="audio" preload="none"></audio>
+  </section>
+
+  <!-- 9. النهاية -->
+  <section class="page sec" data-tab="🤍" data-name="النهاية" id="final">
+    <p class="hand big">لو كنت أقدر أدّيكي حاجة واحدة في الدنيا، كنت هديكي إنك تشوفي نفسك بعيني. ساعتها بس هتعرفي إنتي مميزة عندي قد إيه.</p>
+    <button class="btn" id="hugBtn">حضن كمان 🤗</button>
+  </section>
+  <footer class="small">اتعمل بحب من خالد ليارا 🤍</footer>
+</main>
+
+<nav id="nav" hidden><button id="prev" aria-label="السابق">→</button><div id="tabs"></div><button id="next" aria-label="التالي">←</button></nav>
+<div id="lightbox" hidden><img alt=""><p></p></div>
+<div id="ending" hidden><div class="bigheart">❤</div><p class="hand big" id="endMsg"></p><button class="btn" id="closeEnd">رجوع</button></div>
+<script src="script.js"></script>
+</body>
+</html>
